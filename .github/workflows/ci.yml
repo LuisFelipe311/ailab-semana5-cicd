@@ -116,7 +116,6 @@ jobs:
         working-directory: frontend
         run: npm ci
       - name: Rodar testes
-      - name: Rodar testes
         working-directory: frontend
         run: npm test
 
