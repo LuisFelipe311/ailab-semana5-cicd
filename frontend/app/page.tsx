@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 
+const erroDeTipo: number = "isso nao e um numero";
+
 type HealthResponse = {
   status: string;
   items: string[];
