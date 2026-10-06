@@ -116,10 +116,11 @@ jobs:
         working-directory: frontend
         run: npm ci
       - name: Rodar testes
+      - name: Rodar testes
         working-directory: frontend
         run: npm test
 
-    deploy-backend:
+  deploy-backend:
     name: Publicar Backend no GHCR
     needs: test-backend
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
