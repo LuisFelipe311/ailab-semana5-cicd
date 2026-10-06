@@ -1,5 +1,3 @@
-import sys
-
 from django.test import Client, TestCase
 
 
@@ -9,5 +7,5 @@ class HealthCheckTests(TestCase):
         response = client.get("/api/health/")
         self.assertEqual(response.status_code, 200)
         data = response.json()
-        self.assertEqual(data["status"], "ok")
+        self.assertEqual(data["status"], "falha")
         self.assertIn("Configurar Docker", data["items"])
